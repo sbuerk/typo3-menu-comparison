@@ -17,3 +17,6 @@ composer.lock
 !.ddev/commands/typo3
 !.ddev/typo3/config/system/additional.php
 /var/
+/core
+FIRST_INSTALL
+ENABLE_INSTALL_TOOL

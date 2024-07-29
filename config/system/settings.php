@@ -2,6 +2,7 @@
 return [
     'BE' => [
         'debug' => true,
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$WG1rbEIvbThxQ0E0Mi93MA$38hNLf7hiJoVETzHzQW/OGxr/lZk0QPME+x/1XH5oBA',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -10,8 +11,17 @@ return [
     'DB' => [
         'Connections' => [
             'Default' => [
-                'charset' => 'utf8',
+                'charset' => 'utf8mb4',
+                'dbname' => 'db',
                 'driver' => 'mysqli',
+                'host' => 'db',
+                'password' => 'db',
+                'port' => 3306,
+                'tableoptions' => [
+                    'charset' => 'utf8mb4',
+                    'collate' => 'utf8mb4_unicode_ci',
+                ],
+                'user' => 'db',
             ],
         ],
     ],
@@ -29,35 +39,9 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
-        'ig_slug' => [
-            'disableOwnMenuItem' => '0',
-        ],
-        'mysqlreport' => [
-            'addExplain' => '0',
-            'profileBackend' => '0',
-            'profileFrontend' => '1',
-            'slowQueryTime' => '10.0',
-        ],
-        'warming' => [
-            'crawler' => 'EliasHaeussler\\Typo3Warming\\Crawler\\ConcurrentUserAgentCrawler',
-            'crawlerOptions' => '',
-            'enablePageTree' => '1',
-            'enableToolbar' => '1',
-            'exclude' => '',
-            'limit' => '250',
-            'parserClientOptions' => '',
-            'strategy' => '',
-            'supportedDoktypes' => '1',
-            'verboseCrawler' => 'EliasHaeussler\\Typo3Warming\\Crawler\\OutputtingUserAgentCrawler',
-            'verboseCrawlerOptions' => '',
-        ],
     ],
     'FE' => [
-        'cacheHash' => [
-            'enforceValidation' => true,
-        ],
         'debug' => true,
-        'disableNoCacheParameter' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -65,8 +49,6 @@ return [
     ],
     'GFX' => [
         'processor' => 'GraphicsMagick',
-        'processor_allowTemporaryMasksAsPng' => false,
-        'processor_colorspace' => 'RGB',
         'processor_effects' => false,
         'processor_enabled' => true,
         'processor_path' => '/usr/bin/',
@@ -95,17 +77,10 @@ return [
         'transport_smtp_username' => '',
     ],
     'SYS' => [
-        'UTF8filesystem' => true,
         'caching' => [
             'cacheConfigurations' => [
                 'hash' => [
                     'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
-                ],
-                'imagesizes' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
-                    'options' => [
-                        'compression' => true,
-                    ],
                 ],
                 'pages' => [
                     'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
@@ -123,12 +98,12 @@ return [
         ],
         'devIPmask' => '*',
         'displayErrors' => 1,
-        'encryptionKey' => '38478d49b609dddb215f99a459a79701177b4c4c24c23cc846a471e3e916809994269f30c16122f1cde23c3f570b03d6',
+        'encryptionKey' => '1dd0e52557d04e81c41725b1088e9f842748ae12ed70df3bca8f6414efa3d53bf4be79947b59444c5b379290982fd0e0',
         'exceptionalErrors' => 12290,
-        'features' => [
-            'security.backend.enforceContentSecurityPolicy' => true,
-            'security.usePasswordPolicyForFrontendUsers' => true,
+        'sitename' => 'New TYPO3 Project',
+        'systemMaintainers' => [
+            1,
         ],
-        'sitename' => 'New TYPO3 site',
+        'trustedHostsPattern' => '.*.*',
     ],
 ];

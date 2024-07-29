@@ -5,38 +5,38 @@
 	"type": "project",
 	"version": "1.0.0",
 	"require": {
-		"b13/menus": "^1.0",
-		"helhum/typo3-console": "^8.1",
+		"b13/menus": "dev-task/v13@dev",
 		"julianhofmann/sitepackage": "@dev",
-		"typo3/cms-backend": "^12.4",
-		"typo3/cms-belog": "^12.4",
-		"typo3/cms-beuser": "^12.4",
-		"typo3/cms-core": "^12.4",
-		"typo3/cms-extbase": "^12.4",
-		"typo3/cms-extensionmanager": "^12.4",
-		"typo3/cms-filelist": "^12.4",
-		"typo3/cms-fluid": "^12.4",
-		"typo3/cms-fluid-styled-content": "^12.4",
-		"typo3/cms-frontend": "^12.4",
-		"typo3/cms-info": "^12.4",
-		"typo3/cms-install": "^12.4",
-		"typo3/cms-lowlevel": "^12.4",
-		"typo3/cms-recordlist": "^12.4",
-		"typo3/cms-setup": "^12.4",
-		"typo3/cms-tstemplate": "^12.4"
+		"typo3/cms-backend": "dev-main@dev",
+		"typo3/cms-belog": "dev-main@dev",
+		"typo3/cms-beuser": "dev-main@dev",
+		"typo3/cms-core": "dev-main@dev",
+		"typo3/cms-extbase": "dev-main@dev",
+		"typo3/cms-extensionmanager": "dev-main@dev",
+		"typo3/cms-filelist": "dev-main@dev",
+		"typo3/cms-fluid": "dev-main@dev",
+		"typo3/cms-fluid-styled-content": "dev-main@dev",
+		"typo3/cms-frontend": "dev-main@dev",
+		"typo3/cms-info": "dev-main@dev",
+		"typo3/cms-install": "dev-main@dev",
+		"typo3/cms-lowlevel": "dev-main@dev",
+		"typo3/cms-recordlist": "dev-main@dev",
+		"typo3/cms-setup": "dev-main@dev",
+		"typo3/cms-tstemplate": "dev-main@dev"
 	},
 	"require-dev": {
-		"eliashaeussler/typo3-warming": "^2.0",
-		"internetgalerie/ig-slug": "^1.1",
-		"perftools/php-profiler": "^1.1",
-		"stefanfroemken/mysqlreport": "^3.0"
+		"perftools/php-profiler": "^1.1"
 	},
-	"repositories": [
-		{
+	"repositories": {
+		"core": {
+			"type": "path",
+			"url": "core/typo3/sysext/*"
+		},
+		"packages": {
 			"type": "path",
 			"url": "./packages/*"
 		}
-	],
+	},
 	"config": {
 		"allow-plugins": {
 			"php-http/discovery": true,
@@ -56,5 +56,6 @@
 			"ignore-as-root": false,
 			"web-dir": ".Build/public"
 		}
-	}
+	},
+	"minimum-stability": "dev"
 }

@@ -4,8 +4,23 @@
 ## Usage: initialize
 ## Example: "ddev initialize"
 
-#ddev import-db --src=.project/data/db.sql.gz
-mkdir -p config/sites/main && cp config/sites/config.yaml config/sites/main/
-ddev typo3 install:setup
+ddev exec touch FIRST_INSTALL && \
+    ddev typo3 setup \
+        --driver=mysqli \
+        --host=db \
+        --port=3306 \
+        --dbname=db \
+        --username=db \
+        --password=db \
+        --admin-username=john-doe \
+        --admin-user-password='John-Doe-1701D.' \
+        --admin-email="john.doe@example.com" \
+        --no-interaction \
+        --server-type=apache \
+        --force
+ddev import-db --src=.project/data/db.sql.gz
+#mkdir -p config/sites/main && cp config/sites/config.yaml config/sites/main/
+#ddev typo3 install:setup
+ddev typo3 extension:setup
 mkdir -p .Build/public/fileadmin
 #cd .Build/public/ && tar xf ../../.project/data/fileadmin.tar.gz
