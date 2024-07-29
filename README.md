@@ -24,9 +24,15 @@ comparison, can be found in three posts:
 
 #### Quick start
 
+```terminal
+ddev start ; \
+  ddev initialize
+```
+
 `ddev initialize` will:
-* import a SQL-dump containing over 1,000 pages-records.
-* setup TYPO3 v12
+* import a SQL-dump containing over 1,000 pages-records, translated into two
+  languages, two prepared workspaces and moved workspaces in the first workspace.
+* setup TYPO3 v13 (core dev-main)
 * install a sitepackage containing 5 (plus 2) variants of identical menu
 
 ### Backend

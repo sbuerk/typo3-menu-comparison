@@ -4,8 +4,7 @@
 ## Usage: initialize
 ## Example: "ddev initialize"
 
-ddev exec touch FIRST_INSTALL && \
-    ddev typo3 setup \
+ddev typo3 setup \
         --driver=mysqli \
         --host=db \
         --port=3306 \
