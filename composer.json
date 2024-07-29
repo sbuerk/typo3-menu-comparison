@@ -7,6 +7,7 @@
 	"require": {
 		"b13/menus": "dev-task/v13@dev",
 		"julianhofmann/sitepackage": "@dev",
+		"typo3/cms-adminpanel": "dev-main@dev",
 		"typo3/cms-backend": "dev-main@dev",
 		"typo3/cms-belog": "dev-main@dev",
 		"typo3/cms-beuser": "dev-main@dev",
