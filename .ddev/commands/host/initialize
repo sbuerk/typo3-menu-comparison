@@ -12,15 +12,16 @@ ddev exec touch FIRST_INSTALL && \
         --dbname=db \
         --username=db \
         --password=db \
-        --admin-username=john-doe \
-        --admin-user-password='John-Doe-1701D.' \
+        --admin-username=admin \
+        --admin-user-password='Password_!23' \
         --admin-email="john.doe@example.com" \
         --no-interaction \
         --server-type=apache \
         --force
-ddev import-db --src=.project/data/db.sql.gz
+ddev import-db --file=.project/data/db.sql.gz
 #mkdir -p config/sites/main && cp config/sites/config.yaml config/sites/main/
 #ddev typo3 install:setup
 ddev typo3 extension:setup
 mkdir -p .Build/public/fileadmin
+git restore config/system/settings.php
 #cd .Build/public/ && tar xf ../../.project/data/fileadmin.tar.gz

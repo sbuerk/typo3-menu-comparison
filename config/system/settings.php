@@ -2,7 +2,7 @@
 return [
     'BE' => [
         'debug' => true,
-        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$WG1rbEIvbThxQ0E0Mi93MA$38hNLf7hiJoVETzHzQW/OGxr/lZk0QPME+x/1XH5oBA',
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$U0MwaXlhYWszVk1lZTVtNg$XbdC2eZkV2Mpw/wfDRE0WxF7+/iVidYB1c99FYYqWA8',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -98,7 +98,7 @@ return [
         ],
         'devIPmask' => '*',
         'displayErrors' => 1,
-        'encryptionKey' => '1dd0e52557d04e81c41725b1088e9f842748ae12ed70df3bca8f6414efa3d53bf4be79947b59444c5b379290982fd0e0',
+        'encryptionKey' => '5162c0ed0da51bf522b3875f1294aa099fc21deccbe3d2dc343750845233c91bd4395cfe3042fb80763d8b19bcd3b5fd',
         'exceptionalErrors' => 12290,
         'sitename' => 'New TYPO3 Project',
         'systemMaintainers' => [

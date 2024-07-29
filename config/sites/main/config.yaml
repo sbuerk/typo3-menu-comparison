@@ -8,8 +8,33 @@ languages:
     locale: en_US.UTF-8
     navigationTitle: English
     flag: us
+    hreflang: ''
+    websiteTitle: ''
+  -
+    title: German
+    enabled: true
+    locale: de_DE
+    hreflang: ''
+    base: /de/
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    fallbackType: strict
+    fallbacks: ''
+    flag: de
+    languageId: 1
+  -
+    title: Danish
+    enabled: true
+    locale: da_DK
+    hreflang: ''
+    base: /da/
+    websiteTitle: ''
+    navigationTitle: Dansk
+    fallbackType: strict
+    fallbacks: ''
+    flag: dk
+    languageId: 2
 rootPageId: 1
-websiteTitle: ''
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
@@ -24,3 +49,4 @@ routeEnhancers:
         type: StaticValueMapper
         map:
           pages: pages
+websiteTitle: ''

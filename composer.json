@@ -22,7 +22,8 @@
 		"typo3/cms-lowlevel": "dev-main@dev",
 		"typo3/cms-recordlist": "dev-main@dev",
 		"typo3/cms-setup": "dev-main@dev",
-		"typo3/cms-tstemplate": "dev-main@dev"
+		"typo3/cms-tstemplate": "dev-main@dev",
+		"typo3/cms-workspaces": "dev-main@dev"
 	},
 	"require-dev": {
 		"perftools/php-profiler": "^1.1"
