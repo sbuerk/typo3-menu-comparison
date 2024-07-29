@@ -3,6 +3,8 @@ config {
   sendCacheHeaders = 1
 }
 
+config.admPanel = 1
+
 page >
 page = PAGE
 page {
